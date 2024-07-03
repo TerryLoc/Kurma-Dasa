@@ -1,14 +1,20 @@
 :root {
-  --primary-color: #6b4226; /* Earthy brown for a grounded feel */
-  --secondary-color: #d4e3e4; /* Soft, calming blue for elegance */
-  --success-color: #567d46; /* Natural green for a balanced, serene look */
-  --bg-green: #567d46c3; /* Transparent green for a subtle background */
-  --light-color: #f3e8e1; /* Light, neutral tone for contrast */
-  --light-background: #f3e8e1c3; /* Light, neutral tone for contrast */
-  --dark-color: #2c3e50; /* Deep blue for a grounding, spiritual feel */
-  --text-color: #333333; /* Dark text for readability on light backgrounds */
-  --border-radius: 10px; /* Rounded corners for a modern, friendly look */
+  --success-color: #567d46;
+  /* Natural green for a balanced, serene look */
+  --bg-green: #567d46c7;
+  /* Transparent green for a subtle background */
+  --light-color: #f3e8e1;
+  /* Light, neutral tone for contrast */
+  --light-background: #f3e8e1c3;
+  /* Light, neutral tone for contrast */
+  --dark-color: #2c3e50;
+  /* Deep blue for a grounding, spiritual feel */
+  --text-color: #333333;
+  /* Dark text for readability on light backgrounds */
+  --border-radius: 10px;
+  /* Rounded corners for a modern, friendly look */
   --border: 2px solid var(--text-color);
+  --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
 }
 
 * {
@@ -19,11 +25,14 @@
 
 body {
   font-family: 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell,
-    'Helvetica Neue', sans-serif; /* Modern, readable font */
+    'Helvetica Neue', sans-serif;
+  /* Modern, readable font */
   background-color: var(--secondary-color);
   color: var(--dark-color);
-  line-height: 1.6; /* Improved readability */
-  letter-spacing: 1px; /* Slightly increased letter spacing */
+  line-height: 1.6;
+  /* Improved readability */
+  letter-spacing: 1px;
+  /* Slightly increased letter spacing */
 }
 
 img {
@@ -42,7 +51,8 @@ header {
 header h1 {
   margin: 20px auto;
   font-size: 3em;
-  font-weight: 300; /* Lighter font-weight for elegance */
+  font-weight: 300;
+  /* Lighter font-weight for elegance */
   line-height: 1.2;
 }
 
@@ -55,7 +65,8 @@ nav ul {
   margin: 0;
   padding: 0;
   display: flex;
-  flex-wrap: wrap; /* Responsive wrapping */
+  flex-wrap: wrap;
+  /* Responsive wrapping */
   justify-content: space-between;
 }
 
@@ -68,15 +79,20 @@ nav ul li a {
   color: var(--text-color);
   text-decoration: none;
   font-size: 1.1em;
-  font-weight: 500; /* Slightly bolder for better readability */
-  transition: color 0.3s ease; /* Smooth transition for hover effect */
+  font-weight: 500;
+  /* Slightly bolder for better readability */
+  transition: color 0.3s ease;
+  /* Smooth transition for hover effect */
 }
 
 nav ul li a:hover {
-  color: var(--light-color); /* Highlight color on hover */
-  transform: scale(2); /* Slightly larger size on hover */
+  color: var(--light-color);
+  /* Highlight color on hover */
+  transform: scale(2);
+  /* Slightly larger size on hover */
   font-weight: 600;
-  text-shadow: 0 0 4px var(--dark-color); /* Soft shadow for depth */
+  text-shadow: 0 0 4px var(--dark-color);
+  /* Soft shadow for depth */
 }
 
 main {
@@ -87,41 +103,36 @@ main {
 }
 
 .intro {
-  display: inline;
   text-align: center;
-  height: 100vh;
-}
-
-.intro-text {
   color: var(--light-color);
-  font: inherit;
   font-size: 1.7rem;
   background-color: var(--bg-green);
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-  padding: 20px;
+  padding: 15px;
   position: absolute;
-  top: 30%;
-  left: 10%;
-  right: 50%;
+  top: 25%;
+  left: 5%;
+  right: 60%;
   z-index: 1;
   border-radius: var(--border-radius);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6); /* Soft shadow for depth */
+  /* Soft shadow for depth */
+  box-shadow: var(--box-shadow);
   border: var(--border);
 }
 
 .hero-img {
-  margin: 0 auto;
-  margin-top: 120px;
-  object-fit: contain; /* Image fills the container */
+  margin: 50px auto;
   border-radius: var(--border-radius);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6); /* Soft shadow for depth */
-  filter: contrast(110%) brightness(115%) saturate(110%); /* Image enhancement */
+  /* Soft shadow for depth */
+  box-shadow: var(--box-shadow);
+  /* Image enhancement */
+  filter: contrast(105%) brightness(125%) saturate(105%);
 }
 
 .content {
   height: 85vh;
   position: absolute;
-  top: 100%;
+  top: 85%;
   left: 30%;
 }
 
@@ -144,7 +155,8 @@ main {
   text-align: center;
   background-color: var(--light-background);
   border-radius: var(--border-radius);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6); /* Soft shadow for depth */
+  box-shadow: var(--box-shadow);
+  /* Soft shadow for depth */
 }
 
 .about-text p {
@@ -161,7 +173,8 @@ footer {
   position: fixed;
   width: 100%;
   bottom: 0;
-  border-top: 5px solid var(--success-color); /* Accent border */
+  border-top: 5px solid var(--success-color);
+  /* Accent border */
 }
 
 .social-links {
@@ -176,13 +189,30 @@ footer {
   font-size: 1.5em;
 }
 
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
   header h1 {
     font-size: 1.5em;
   }
 
   nav ul li a {
     font-size: 0.9em;
+  }
+
+  .intro {
+    height: 100%;
+    padding: 0;
+
+  }
+
+  .hero-text {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .intro-text {
+    position: block;
+    width: 90%;
+    font-size: 1rem;
   }
 }
 
@@ -194,21 +224,5 @@ footer {
 
   nav ul li a {
     font-size: 1em;
-  }
-
-  .intro-text {
-    width: 40%;
-    right: 58%;
-    font-size: 1.5rem;
-  }
-
-  .about-text {
-    width: 90%;
-    padding: 10px;
-  }
-
-  .about-text h3 {
-    font-size: 1.8rem;
-    margin-top: 20px;
   }
 }
