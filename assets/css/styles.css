@@ -1,0 +1,214 @@
+:root {
+  --primary-color: #6b4226; /* Earthy brown for a grounded feel */
+  --secondary-color: #d4e3e4; /* Soft, calming blue for elegance */
+  --success-color: #567d46; /* Natural green for a balanced, serene look */
+  --bg-green: #567d46c3; /* Transparent green for a subtle background */
+  --light-color: #f3e8e1; /* Light, neutral tone for contrast */
+  --light-background: #f3e8e1c3; /* Light, neutral tone for contrast */
+  --dark-color: #2c3e50; /* Deep blue for a grounding, spiritual feel */
+  --text-color: #333333; /* Dark text for readability on light backgrounds */
+  --border-radius: 10px; /* Rounded corners for a modern, friendly look */
+  --border: 2px solid var(--text-color);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+    'Helvetica Neue', sans-serif; /* Modern, readable font */
+  background-color: var(--secondary-color);
+  color: var(--dark-color);
+  line-height: 1.6; /* Improved readability */
+  letter-spacing: 1px; /* Slightly increased letter spacing */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  text-transform: uppercase;
+}
+
+header h1 {
+  margin: 20px auto;
+  font-size: 3em;
+  font-weight: 300; /* Lighter font-weight for elegance */
+  line-height: 1.2;
+}
+
+nav {
+  margin-bottom: 50px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap; /* Responsive wrapping */
+  justify-content: space-between;
+}
+
+nav ul li {
+  margin: 10px 15px;
+}
+
+nav ul li a {
+  display: inline-block;
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: 500; /* Slightly bolder for better readability */
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+nav ul li a:hover {
+  color: var(--light-color); /* Highlight color on hover */
+  transform: scale(2); /* Slightly larger size on hover */
+  font-weight: 600;
+  text-shadow: 0 0 4px var(--dark-color); /* Soft shadow for depth */
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 95%;
+}
+
+.intro {
+  display: inline;
+  text-align: center;
+  height: 100vh;
+}
+
+.intro-text {
+  color: var(--light-color);
+  font: inherit;
+  font-size: 1.7rem;
+  background-color: var(--bg-green);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  right: 50%;
+  z-index: 1;
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6); /* Soft shadow for depth */
+  border: var(--border);
+}
+
+.hero-img {
+  margin: 0 auto;
+  margin-top: 120px;
+  object-fit: contain; /* Image fills the container */
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6); /* Soft shadow for depth */
+  filter: contrast(110%) brightness(115%) saturate(110%); /* Image enhancement */
+}
+
+.content {
+  height: 85vh;
+  position: absolute;
+  top: 100%;
+  left: 30%;
+}
+
+.content h3 {
+  color: var(--dark-color);
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-shadow: var(--light-color) 1px 1px 1px;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 500px;
+  margin: 0 auto;
+  width: 80%;
+  padding: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+  background-color: var(--light-background);
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6); /* Soft shadow for depth */
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  width: 85%;
+  margin: 20px auto;
+}
+
+footer {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  border-top: 5px solid var(--success-color); /* Accent border */
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.fab {
+  margin: 0 10px;
+  color: var(--light-color);
+  font-size: 1.5em;
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5em;
+  }
+
+  nav ul li a {
+    font-size: 0.9em;
+  }
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 900px) {
+  header h1 {
+    font-size: 2em;
+  }
+
+  nav ul li a {
+    font-size: 1em;
+  }
+
+  .intro-text {
+    width: 40%;
+    right: 58%;
+    font-size: 1.5rem;
+  }
+
+  .about-text {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .about-text h3 {
+    font-size: 1.8rem;
+    margin-top: 20px;
+  }
+}
